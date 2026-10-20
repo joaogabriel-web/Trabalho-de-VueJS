@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exemplo Vue.js</title>
+
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    input {
+      padding: 8px;
+      margin: 10px;
+    }
+
+    button {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="app">
+    <h1>{{ mensagem }}</h1>
+
+    <input v-model="mensagem" placeholder="Digite algo">
+
+    <br><br>
+
+    <button @click="contador++">
+      Cliques: {{ contador }}
+    </button>
+  </div>
+
+    <script>
+      const { createApp } = Vue;
+
+      createApp({
+        data() {
+          return {
+            mensagem: "Olá Vue.js!",
+            contador: 0
+          };
+        }
+      }).mount("#app");
+    </script>
+ </body>
+</html>
