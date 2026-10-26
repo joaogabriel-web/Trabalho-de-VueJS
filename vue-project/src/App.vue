@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 
+const mensagem = ref('Olá Vue.js!')
 const contador = ref(0)
 </script>
 
@@ -13,7 +14,17 @@ const contador = ref(0)
     <button @click="contador++">
       Cliques: {{ contador }}
     </button>
+
+    <br><br>
+
+    <h1>{{ mensagem }}</h1>
+
+
+    <input v-model="mensagem" placeholder="Digite algo">
+
+
   </div>
+
 </template>
 
 <style>
@@ -44,4 +55,12 @@ button {
   border: none;
   border-radius: 5px;
 }
+
+input {
+  background-color: #fefefe;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
 </style>
