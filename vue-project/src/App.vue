@@ -17,6 +17,16 @@ const contador = ref(0)
 </template>
 
 <style>
+* {
+  background-color: #040404;
+}
+
+p {
+  color: #ffffff;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
 .container {
   text-align: center;
   margin-top: 50px;
